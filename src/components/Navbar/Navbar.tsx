@@ -3,6 +3,7 @@ import { AuthContext } from 'context/auth';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 
 const menux = [
     {
@@ -11,12 +12,13 @@ const menux = [
     },
     {
         label: 'Mis tareas',
-        path: '/me/tasks'
+        path: '/my-tasks'
     },
 ]
 
 function Navbar() {
     const { isLoggedIn, user } = useContext(AuthContext)
+    const router = useRouter()
     const [isActiveCollapse, setIsActiveCollapse] = useState(false)
     return (
         <nav className='bg-white shadow-md'>
@@ -31,7 +33,7 @@ function Navbar() {
                         {menux.map(({ label, path }) => {
                             return (
                                 <Link href={path} key={label}>
-                                    <a className='p-4 lg:py-3 lg:px-6 hover:text-gray-300' >{label}</a>
+                                    <a className={`p-4 lg:py-3 lg:px-6 hover:text-gray-300 ${router.pathname === path ? 'border-b-2 border-blue-600' : ''}`} >{label}</a>
                                 </Link>
                             )
                         })}

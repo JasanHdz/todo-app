@@ -14,7 +14,7 @@ const items = [
         label: 'Mis tareas',
         icon: <CheckIcon className='w-6 h-6 text-green-600' />,
         detail: 'Revisa todas tus tareas.',
-        path: '/me/tasks'
+        path: '/my-tasks'
     },
     {
         label: 'Preferencias',
@@ -27,7 +27,7 @@ const items = [
 function Collpase() {
     const { logout } = useContext(AuthContext)
     return (
-        <div className='absolute top-10 right-0 rounded-lg shadow-lg border w-80 bg-white p-6'>
+        <div className='absolute z-20 top-10 right-0 rounded-lg shadow-lg border w-80 bg-white p-6'>
             <ul className='grid gap-2'>
                 {items.map(({ path, label, detail, icon }) => (
                     <li key={path}>

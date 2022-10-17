@@ -5,9 +5,11 @@ import Head from 'next/head'
 interface Props {
     children: ReactNode
     title?: string
+    className?: string
+    isEmptyPadding?: boolean
 }
 
-function Layout({ children, title }: Props) {
+function Layout({ children, title, className, isEmptyPadding }: Props) {
     return (
         <>
             <Navbar />
@@ -16,7 +18,7 @@ function Layout({ children, title }: Props) {
                     <title>{title}</title>
                 </Head>
             )}
-            <Wrapper className='mx-auto'>
+            <Wrapper className={className} isEmptyPadding={isEmptyPadding}>
                 {children}
             </Wrapper>
             <Footer />
