@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { db, seedData } from '@/database'
-import { config } from '@/config'
 import { User, Entry } from '@/models'
+import { config } from '@/config'
 
 type Data = {
   message: string

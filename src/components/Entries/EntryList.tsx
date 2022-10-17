@@ -1,7 +1,7 @@
-import { EntryStatus } from '@/interfaces';
-import { DragEvent, useState, useContext, useMemo } from 'react'
-import EntryCard from './EntryCard';
+import { DragEvent, useContext, useMemo } from 'react'
+import type { EntryStatus } from '@/interfaces';
 import { EntriesContext } from '@/context';
+import EntryCard from './EntryCard';
 import AddNewEntry from './AddNewEntry';
 
 interface Props {

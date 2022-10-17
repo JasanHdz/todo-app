@@ -1,8 +1,8 @@
+import { getSession } from 'next-auth/react'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import type { IEntry, IUser } from '@/interfaces'
 import { db } from '@/database'
 import { Entry } from '@/models'
-import { IEntry, IUser } from '@/interfaces'
-import { getSession } from 'next-auth/react'
 
 type Data = { message: string } | { message: string, data: IEntry[] } | { message: string, data: IEntry }
 

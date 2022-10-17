@@ -1,8 +1,7 @@
-import React, { DragEvent, useContext } from 'react'
-import { IEntry } from '@/interfaces'
+import { DragEvent, useContext } from 'react'
+import type { IEntry, IUser } from '@/interfaces'
 import { EntriesContext } from '@/context'
-import { Avatar } from '..'
-import { IUser } from '../../interfaces/user';
+import { Avatar } from '@/components'
 import { getTimeAgo } from '@/utils';
 
 interface Props {

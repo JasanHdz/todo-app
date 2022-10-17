@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
-import { IUser } from 'src/interfaces'
-import { config } from '../config'
+import { IUser } from '@/interfaces'
+import { config } from '@/config'
 
 export const signToken = (user: IUser)=> {
     const { _id, email, name, role } = user

@@ -1,5 +1,5 @@
 import { EntriesState } from '@/context'
-import { IEntry, IDraggingEntry, EntryStatus } from '@/interfaces';
+import type { IEntry, IDraggingEntry, EntryStatus } from '@/interfaces';
 
 type EntriesActionType =
     | { type: 'Add-Entry', payload: IEntry } 

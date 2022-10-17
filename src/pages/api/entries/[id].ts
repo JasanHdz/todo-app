@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import mongoose from 'mongoose';
 import { db } from '@/database'
 import { Entry } from '@/models'
-import { IEntry } from '@/interfaces'
+import type { IEntry } from '@/interfaces'
 
 type Data = { message: string } | { message: string, data: IEntry }
 

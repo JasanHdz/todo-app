@@ -3,7 +3,7 @@ import { PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Input, Button } from '..'
 import { useForm } from '@/hooks'
 import { EntriesContext } from '@/context';
-import { EntryStatus } from '@/interfaces';
+import type { EntryStatus } from '@/interfaces';
 
 function AddNewEntry({ status }: { status: EntryStatus }) {
     const [showAddCard, setShowAddCard] = useState(false)

@@ -1,10 +1,8 @@
 import { ReactNode, useReducer, useEffect, useContext, useCallback } from 'react';
-import { EntriesContext, entriesReducer } from "@/context"
-import { EntryStatus, IEntry, IDraggingEntry } from '@/interfaces';
-import { entriesApi } from 'api';
-import { AuthContext } from '../auth/AuthContext';
 import { useRouter } from 'next/router';
-import { IUser } from '../../interfaces/user';
+import type { EntryStatus, IEntry, IDraggingEntry, IUser } from '@/interfaces';
+import { EntriesContext, entriesReducer, AuthContext } from "@/context"
+import { entriesApi } from '@/api'
 
 export interface EntriesState {
     entries: IEntry[],

@@ -30,6 +30,7 @@
             "@/models": ["models/index"],
             "@/context": ["context/index"],
             "@/styles/*": ["styles/*"],
+            "@/api": ["api/index"],
         }
     },
     "include": [

@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { IEntry, EntryStatus, IDraggingEntry } from '@/interfaces';
+import type { IEntry, EntryStatus, IDraggingEntry } from '@/interfaces';
 
 export interface EntriesContextProps {
     entries: IEntry[]

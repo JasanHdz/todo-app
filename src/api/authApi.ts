@@ -1,5 +1,4 @@
-import { IPayloadSignUp } from '@/interfaces';
-import { config } from '@/config'
+import type { IPayloadSignUp } from '@/interfaces';
 
 export async function createUser(payload: IPayloadSignUp) {
     const body = JSON.stringify(payload)
